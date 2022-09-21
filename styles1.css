@@ -24,7 +24,6 @@ body{
 }
 .empty_container{
     width: 100%;
-    float: left;
     height: 60px;
     background-color: #1f2833;
 }
@@ -46,19 +45,16 @@ img{
     display: none;
 }
 .slider_btn{
+    color: #c5c6c7;
     position: absolute;
     cursor: pointer;
-    font-size: 68px;
+    font-size: 70px;
     bottom: 50%;
-    background-color: #C1C3BD;
-    border-style: solid;
-    border-radius: 15px;
 }
 .slider_btn:hover{
-    background-color: #04F9AF;
-    border-style: solid;
-    border-radius: 15px;
-    
+    font-size: 120px;
+    text-shadow: 15px 15px #45A29E;
+
 }
 .next_button{
     right: 5%;
@@ -77,17 +73,17 @@ img{
 }
 .slider_text1{
     position: absolute;
-    font-size: 60px;
+    font-size: 32px;
     color: #c5c6c7;
-    left: 13%;
-    bottom: 6%;
+    left: 15%;
+    bottom: 39%;
 }
 .slider_image {
     animation-name: fade;
     animation-duration: 1.5s;
   }
   @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .3} 
     to {opacity: 1}
   }
 .form_title{
@@ -114,6 +110,13 @@ img{
     transform: translate(-50%, -50%);
   
 }
+#range_text{
+    text-align: center;
+    color: #c5c6c7 ;
+    font-size: 20px;
+    margin-left: 46%;
+
+}
 #pstcod{
     height: 31px;
     font-size: 12pt;
@@ -136,7 +139,8 @@ label{
     color: white;
 
 }
-table{
+#table_data{
+    display: none;
     width: 80%;
     margin: auto;
     font-size: 27px;
@@ -147,7 +151,7 @@ table{
 th,td{
     color: #66fcf1;
     border: 1px solid #c5c6c7;
-    background-color: #c5c6c7;
+    background-color: #0b0c10;
 }
 .empty_container2{
     width: 100%;

@@ -1,4 +1,5 @@
-
+let er = document.getElementById("wrng_inpt");
+er.style.display="none";
 let slideindex = 1;
 showslides(slideindex);
 function slidernext(n) {
@@ -58,6 +59,7 @@ async function loaddata(url){
   try{const response= await fetch(url);
   const data= await response.json();
   if(response.ok){
+  er.style.display="none";
   inserttable(data);
 }
 else{
@@ -65,7 +67,7 @@ else{
 }
 }
 catch (error){
-  alert("wrong input");
+  er.style.display="inline"
   let inp = document.getElementById("table_data");
   inp.style.display="none";
 }
@@ -73,12 +75,18 @@ catch (error){
 function inserttable(data){
   let tab_val = document.getElementById("table_data");
   var temp ="";
-  temp += "<td>" + data.places[0]["place name"] + "</td>";
-  temp += "<td>" + data.places[0].longitude + "</td>";
-  temp += "<td>" + data.places[0].state + "</td>";
-  temp += "<td>" + data.places[0]["state abbreviation"] + "</td>";
-  temp += "<td>" + data.places[0].latitude + "</td>";
+  for (let i = 0; i < data.places.length; i++) 
+  {
+  temp +="<tr>"
+  temp += "<td>" + data.places[i]["place name"] + "</td>";
+  temp += "<td>" + data.places[i].longitude + "</td>";
+  temp += "<td>" + data.places[i].state + "</td>";
+  temp += "<td>" + data.places[i]["state abbreviation"] + "</td>";
+  temp += "<td>" + data.places[i].latitude + "</td>";
+  temp +="</tr>"
+}
   document.getElementById("table_input").innerHTML = temp;
   tab_val.style.display = "table";  
 
 }
+

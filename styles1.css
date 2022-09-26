@@ -2,58 +2,60 @@
     box-sizing: border-box;
 }
 body{
-   background-color:  #1f2833;
+   background-color:  #d4a59a;
 }
 .titlebar{
     width: 100%;
-    padding: 2px;
-    font-family: Monoton;
-    color: #66fcf1;
-    background-color: #0b0c10;
+    padding: 1px;
+    background-color: #bc4639;
     
 }
   
 .titlebar1{
-    margin-left: 13%;
+    font-family: Monoton;
+    color: #073858;
+    margin-left: 9%;
 }
-.empty_container1{
+.empty_container1{ 
     width: 100%;
     float: left;
     height: 121px;
-    background-color: #1f2833;
+    background-color: #d4a59a;
 }
 .empty_container{
     width: 100%;
     height: 60px;
-    background-color: #1f2833;
+    background-color: #d4a59a;
 }
 img{
+    filter: brightness(110%);
     border-radius: 15px;
 
 }
 .slider_container{
+    position:relative;
     float: left;
-    width: 100%;
-    background-color: #1f2833;
+    width: 80%;
+    left: 10%;
+    background-color: #d4a59a;
+    font-family: Lobster;
 } 
 .slider_image{
-    width: 80%;
     position: relative;
-    margin: auto;
 }
 .slider_image1{
     display: none;
 }
 .slider_btn{
-    color: #c5c6c7;
+    color: #073858;
     position: absolute;
     cursor: pointer;
     font-size: 70px;
     bottom: 50%;
+    font-weight: bold;
 }
 .slider_btn:hover{
     font-size: 120px;
-    text-shadow: 15px 15px #45A29E;
 
 }
 .next_button{
@@ -69,40 +71,60 @@ img{
     left: 26%;
     bottom: 50%;
     font-size: 143px;
-    color:  #66fcf1;
+    color:  #4285f4;
+    -ms-transform: translate(-50%, -50%);
+
+
 }
 .slider_text1{
     position: absolute;
     font-size: 32px;
-    color: #c5c6c7;
+    color: #5c2018;
     left: 15%;
     bottom: 39%;
 }
-.slider_image {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  @keyframes fade {
-    from {opacity: .3} 
-    to {opacity: 1}
-  }
+.dot1{
+position: absolute;
+left: 50%;
+bottom: 7%;
+transform: translate(-50%);
+
+}
+.dot{
+    width: 53px;
+    height: 16px;
+    background-color: #073858;
+    display: inline-block;
+    margin: 9px;
+}
+ .dot:hover{
+    cursor: pointer;
+    background-color: #d4a59a;
+
+}
+
+  
 .form_title{
     width: 80%;
     margin: auto;
     font-size: 50px;
     font-weight: bold;
-    background-color: #0b0c10;
     text-align: center;
-    color: #c5c6c7 ;
+    background-color: #bc4639;
+    color: #073858 ;
 }
 .form_container{
     position: relative;
     width: 80%;
     margin:auto;
     height: 500px;
-    background-image: url("images/image4.jpg");
+    background: rgba(0, 0, 0, 0.3) url("images/image4.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    
 }
 .form_input{
+    display: inline;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -114,30 +136,49 @@ img{
     text-align: center;
     color: #c5c6c7 ;
     font-size: 20px;
-    margin-left: 46%;
 
 }
-#pstcod{
-    height: 31px;
-    font-size: 12pt;
-}
+
 label{
-    font-size: 32px;
-    color: #66fcf1;
-}
-#country_name{
-    height: 31px;
-    font-size: 12pt;
-}
-#btn1{
     font-size: 15pt;
+    color: #4285f4;
+}
+
+#country_name, #pstcod{
+    height: 47px;
+    font-size: 15pt;
+    width: 245px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    margin-bottom: 5px;
+    color: white; 
+}
+input::placeholder{
+    color: white;
+}
+
+option{
+    color: white;
+    background-color: black;
+}
+#wrng_inpt{
+    color: red;
     position: absolute;
-    top: 65%;
-    left: 48%;
+    left: 107%;
+}
+
+#btn1{
+    font-size: 18pt;
+    width: 245px;
     padding: 5px;
     background-color: #073858;
     color: white;
 
+}
+#btn1:hover{
+    background-color: #45A29E;
+    cursor: pointer;
 }
 #table_data{
     display: none;
@@ -149,37 +190,37 @@ label{
 
 }
 th,td{
-    color: #66fcf1;
+    color: #f3e0dc;
     border: 1px solid #c5c6c7;
-    background-color: #0b0c10;
+    background-color: #5c2018;
 }
 .empty_container2{
     width: 100%;
     height: 7px;
-    background-color: #45A29E;
+    background-color: #f3e0dc;
 }
 footer{
     position: relative;
     width: 100%;
     height: 222px;
-    background-color: #0b0c10;
+    background-color: #bc4639;
 
 }
 .footer_text2{
     position: absolute;
     right: 1%;
     top: 0px;
-    color: #C1C3BD;
+    color: #E7E3D4;
 
 }
 .footer_text1{
     position: absolute;
     top: 0px;
     left: 1%;
-    color: #C1C3BD;
+    color: #E7E3D4;
 }
 h2{
-    color:#66fcf1;
+    color:  #4285f4;
     font-size: 30px;
 }
 p{

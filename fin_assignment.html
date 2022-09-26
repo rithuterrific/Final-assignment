@@ -3,7 +3,7 @@
 <head>
 <title>  Know your location </title>
 <link rel="stylesheet" href="styles1.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Lobster">
 </head>
 <body>
     <header class="titlebar">
@@ -32,13 +32,17 @@
             <span class="slider_btn next_button" onclick="slidernext(1)"> &#187; </span>
             <span class="slider_btn prev_button" onclick="slidernext(-1)"> &#171; </span>
         </div>
-            
+        <div class="dot1">
+            <span class="dot" onclick="currentslide(1)"></span> 
+            <span class="dot" onclick="currentslide(2)"></span> 
+            <span class="dot" onclick="currentslide(3)"></span> 
+          </div>
     </div>
     <div class="empty_container1"></div>
-    <div class="form_title"> Location tracker</div>
+    <div class="form_title"> Location Tracker</div>
     <div class="form_container">
     <form class="form_input">
-        <label for="country_name">COUNTRY:</label>
+        <label for="country_name">COUNTRY:</label><br>
         <select id="country_name" onchange="getrange()">
             <option  value="no">Select country</option>
             <option  value="in">INDIA</option>
@@ -47,11 +51,13 @@
             <option  value="de">GERMANY</option>
             <option  value="hu">HUNGARY</option>
         </select><br><br>
-        <label for="pstcod">POSTCODE:</label>
-        <input type="text" id="pstcod" name="pstcod" placeholder="Enter postcode"><br>
+        <label for="pstcod">POSTCODE:</label><br>
+        <input type="text" id="pstcod" name="pstcod" placeholder="Enter postcode" autocomplete="off">
+        <p id="wrng_inpt">WrongInput </p>
+        <br>
         <small id="range_text"></small><br><br>
-      </form> 
-      <button onclick="getvalue();" id="btn1"> Submit</button>
+        <button type="button" onclick="getvalue();" id="btn1"> Submit</button>
+     </form> 
    </div>
     <div class="empty_container"></div>
     <table id="table_data">
